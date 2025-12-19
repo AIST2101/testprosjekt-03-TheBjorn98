@@ -19,7 +19,7 @@ jobs:
       with:
         test-name: test
         setup-command: ''
-        command: unzip -P {{ secrets.HIDDEN_PASSWORD }} validate.zip && bash validate.sh
+        command: unzip -P "${{ secrets.HIDDEN_PASSWORD }}" validate.zip && bash validate.sh
         timeout: 10
         max-score: 20
     - name: Autograding Reporter
